@@ -20,33 +20,33 @@ def get_filters():
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         city_input = input("Enter the city: ").lower()
-        if city_input != "chicago" and city_input != "new york city" and city_input != "washington": 
+        if city_input != "chicago" and city_input != "new york city" and city_input != "washington":
           print("Incorrect city. Please enter either chicago, new york city, and washington")
         else:
           break
-    city = city_input    
+    city = city_input
     print("You chose "+city)
 
     # get user input for month (all, january, february, ... , june)
     while True:
         month_input = input("Enter the month: ").lower()
-        if month_input != "all" and month_input != "january" and month_input != "february" and month_input != "march" and month_input != "april" and month_input != "may" and month_input != "june": 
+        if month_input != "all" and month_input != "january" and month_input != "february" and month_input != "march" and month_input != "april" and month_input != "may" and month_input != "june":
           print("Incorrect month. Please enter either all, january, february, ... , june")
         else:
           break
-    
+
     month = month_input
     print("You chose "+month)
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day_input = input("Enter the day: ").lower()
-        if day_input != "all" and day_input != "monday" and day_input != "tuesday" and day_input != "wednesday" and day_input != "thursday" and day_input != "friday" and day_input != "saturday" and day_input != "sunday": 
+        if day_input != "all" and day_input != "monday" and day_input != "tuesday" and day_input != "wednesday" and day_input != "thursday" and day_input != "friday" and day_input != "saturday" and day_input != "sunday":
           print("Incorrect day. Please enter either all, Monday, tuesday, ... sunday")
         else:
           break
-        
-    day = day_input    
+
+    day = day_input
     print("You chose "+day)
 
     print('-'*40)
@@ -79,7 +79,7 @@ def load_data(city, month, day):
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
-    
+
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
 
@@ -87,7 +87,7 @@ def load_data(city, month, day):
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df['day_of_week'] == day.title()]
-        
+
     return df
 
 
@@ -180,7 +180,7 @@ def user_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-    
+
 def display_data(df):
     summary = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n').lower()
     if summary.lower() != 'yes':
@@ -193,7 +193,7 @@ def display_data(df):
            summary = input("Do you wish to continue?: ").lower()
            if summary.lower() != 'yes':
               break
-
+# Main function
 def main():
     while True:
         city, month, day = get_filters()
