@@ -7,7 +7,7 @@
 The Github Project
 
 ### Description
-Describe what your project is about and what it does
+Its about Version control using Git
 
 ### Files used
 Include the files used
