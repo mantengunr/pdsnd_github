@@ -19,7 +19,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-        city_input = input("Enter the city: ").lower()
+        city_input = input("Enter the city name: ").lower()
         if city_input != "chicago" and city_input != "new york city" and city_input != "washington":
           print("Incorrect city. Please enter either chicago, new york city, and washington")
         else:
@@ -40,8 +40,16 @@ def get_filters():
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
+<<<<<<< HEAD
         day_input = input("Enter the day: ").lower()
         if day_input != "all" and day_input != "monday" and day_input != "tuesday" and day_input != "wednesday" and day_input != "thursday" and day_input != "friday" and day_input != "saturday" and day_input != "sunday":
+||||||| 485f209
+        day_input = input("Enter the day: ").lower()
+        if day_input != "all" and day_input != "monday" and day_input != "tuesday" and day_input != "wednesday" and day_input != "thursday" and day_input != "friday" and day_input != "saturday" and day_input != "sunday":
+=======
+        day_input = input("Enter the week day: ").lower()
+        if day_input != "all" and day_input != "monday" and day_input != "tuesday" and day_input != "wednesday" and day_input != "thursday" and day_input != "friday" and day_input != "saturday" and day_input != "sunday":
+>>>>>>> refactoring
           print("Incorrect day. Please enter either all, Monday, tuesday, ... sunday")
         else:
           break
